@@ -1,3 +1,5 @@
+:set shellcmdflag=-lmc
+
 :syntax enable
 au BufRead,BufNewFile *.json set filetype=json
 
