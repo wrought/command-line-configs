@@ -18,3 +18,13 @@ alias git\-graph="git log --pretty=oneline --graph" # make a pretty graph of git
 alias svn\-clean="svn st | grep '?' | awk '{print $2}' | xargs rm -rf"
 
 manswitch () { man $1 | less -p "^ +$2"; }
+
+
+# Config for converter alias and usage in vim
+
+shopt -s expand_aliases
+
+alias md2html='pandoc -t html -f markdown'
+
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
