@@ -19,12 +19,13 @@ alias svn\-clean="svn st | grep '?' | awk '{print $2}' | xargs rm -rf"
 
 manswitch () { man $1 | less -p "^ +$2"; }
 
-
 # Config for converter alias and usage in vim
-
 shopt -s expand_aliases
-
 alias md2html='pandoc -t html -f markdown'
 
-
+# Config for node version manager
 [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+# Config to learn alternative languages and keyboard layouts
+alias spanish="setxkbmap es && xvkbd &"
+alias english="setxkbmap us && pkill xvkbd"
