@@ -4,6 +4,11 @@
 #                          #
 ############################
 
+# adds ~/bin to $PATH for scripts
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+
 # more esoteric aliases
 # git
 alias git\-graph="git log --pretty=oneline --graph" # make a pretty graph of git merges
